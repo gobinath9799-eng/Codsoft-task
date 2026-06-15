@@ -1,0 +1,76 @@
+PROJECT 4: RECOMMENDATION SYSTEM
+Title
+
+Movie Recommendation System Using C
+
+Objective
+
+To recommend movies based on user-selected genres.
+
+Description
+
+Recommendation systems are widely used in online platforms. This project recommends movies according to user preferences.
+
+Algorithm
+Display movie categories.
+Accept user choice.
+Match choice with recommendations.
+Display suggested movies.
+End program.
+Source Code
+#include <stdio.h>
+
+int main()
+{
+    int choice;
+
+    printf("===== MOVIE RECOMMENDATION SYSTEM =====\n");
+
+    printf("1. Action\n");
+    printf("2. Comedy\n");
+    printf("3. Horror\n");
+
+    printf("Enter Choice: ");
+    scanf("%d",&choice);
+
+    switch(choice)
+    {
+        case 1:
+            printf("\nRecommended Movies:\n");
+            printf("Avengers\n");
+            printf("Batman\n");
+            break;
+
+        case 2:
+            printf("\nRecommended Movies:\n");
+            printf("Mr Bean\n");
+            printf("Home Alone\n");
+            break;
+
+        case 3:
+            printf("\nRecommended Movies:\n");
+            printf("Conjuring\n");
+            printf("Insidious\n");
+            break;
+
+        default:
+            printf("Invalid Choice\n");
+    }
+
+    return 0;
+}
+Sample Input
+Enter Choice: 1
+Sample Output
+Recommended Movies:
+Avengers
+Batman
+Sample Input
+Enter Choice: 3
+Sample Output
+Recommended Movies:
+Conjuring
+Insidious
+Result
+
+The Recommendation System successfully suggested movies based on user preferences.
