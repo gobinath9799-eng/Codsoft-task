@@ -1,0 +1,82 @@
+PROJECT 5: FACE DETECTION AND RECOGNITION
+Title
+
+Face Detection System Using OpenCV
+
+Objective
+
+To detect human faces in images using OpenCV Haar Cascade Classifier.
+
+Description
+
+Face Detection is an important AI application used in security systems, smartphones, and surveillance systems. This project detects faces in an image and marks them with rectangles.
+
+Requirements
+OpenCV Library
+Haar Cascade XML File
+C++ Compiler
+Algorithm
+Load image.
+Load Haar Cascade classifier.
+Scan image for faces.
+Detect face regions.
+Draw rectangles around detected faces.
+Display output image.
+End program.
+Source Code
+#include <opencv2/opencv.hpp>
+#include <iostream>
+
+using namespace std;
+using namespace cv;
+
+int main()
+{
+    CascadeClassifier faceCascade;
+
+    if(!faceCascade.load("haarcascade_frontalface_default.xml"))
+    {
+        cout<<"Error Loading Cascade File";
+        return -1;
+    }
+
+    Mat image = imread("face.jpg");
+
+    vector<Rect> faces;
+
+    faceCascade.detectMultiScale(image, faces);
+
+    for(int i=0;i<faces.size();i++)
+    {
+        rectangle(image,
+                  faces[i],
+                  Scalar(255,0,0),
+                  2);
+    }
+
+    cout<<"Faces Detected: "<<faces.size()<<endl;
+
+    imshow("Face Detection",image);
+
+    waitKey(0);
+
+    return 0;
+}
+Sample Output
+Loading Image...
+Loading Haar Cascade...
+
+Faces Detected: 2
+
+Face Detection Successful
+Visual Output
++------------+
+|   FACE     |
++------------+
+
++------------+
+|   FACE     |
++------------+
+Result
+
+The Face Detection System successfully detected and highlighted faces present in the image.
