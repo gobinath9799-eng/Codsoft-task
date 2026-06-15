@@ -1,0 +1,73 @@
+PROJECT 1: CHATBOT WITH RULE-BASED RESPONSES
+Title
+Rule-Based Chatbot Using C Language
+
+Objective
+To develop a simple chatbot that responds to user queries using predefined rules and conditional statements.
+
+Description
+A Rule-Based Chatbot is a simple AI application that interacts with users using predefined rules. The chatbot analyzes user input and generates appropriate responses based on keywords. This project demonstrates the basics of Artificial Intelligence and Natural Language Processing.
+
+Algorithm
+Start the program.
+Accept user input.
+Check whether the input contains predefined keywords.
+Display the corresponding response.
+Continue the conversation until the user enters "bye".
+Terminate the program.
+  
+Source Code
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char input[100];
+
+    printf("===== RULE BASED CHATBOT =====\n");
+
+    while(1)
+    {
+        printf("\nYou : ");
+        fgets(input,sizeof(input),stdin);
+
+        if(strstr(input,"hello") || strstr(input,"hi"))
+        {
+            printf("Bot : Hello! How can I help you?\n");
+        }
+        else if(strstr(input,"name"))
+        {
+            printf("Bot : My name is CodSoft Chatbot.\n");
+        }
+        else if(strstr(input,"how are you"))
+        {
+            printf("Bot : I am fine. Thank you!\n");
+        }
+        else if(strstr(input,"bye"))
+        {
+            printf("Bot : Goodbye! Have a nice day.\n");
+            break;
+        }
+        else
+        {
+            printf("Bot : Sorry, I don't understand.\n");
+        }
+    }
+
+    return 0;
+}
+Sample Input
+You : hello
+Sample Output
+Bot : Hello! How can I help you?
+Sample Input
+You : what is your name
+Sample Output
+Bot : My name is CodSoft Chatbot.
+Sample Input
+You : bye
+Sample Output
+Bot : Goodbye! Have a nice day.
+  
+  Result
+The Rule-Based Chatbot was successfully developed and tested. The chatbot responded correctly to predefined user queries.
