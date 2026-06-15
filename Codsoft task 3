@@ -1,0 +1,60 @@
+PROJECT 3: IMAGE CAPTIONING
+Title
+
+Simple Image Caption Generator Using C
+
+Objective
+
+To generate captions for images based on image names.
+
+Description
+
+Image Captioning combines image understanding and text generation. In this simplified project, predefined captions are displayed for specific image names.
+
+Algorithm
+Start program.
+Accept image name.
+Compare image name with predefined values.
+Display matching caption.
+End program.
+Source Code
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char image[50];
+
+    printf("Enter Image Name: ");
+    scanf("%s",image);
+
+    if(strcmp(image,"dog.jpg")==0)
+    {
+        printf("Caption: A dog is standing on the grass.\n");
+    }
+    else if(strcmp(image,"cat.jpg")==0)
+    {
+        printf("Caption: A cat is sitting on a chair.\n");
+    }
+    else if(strcmp(image,"car.jpg")==0)
+    {
+        printf("Caption: A car is parked on the road.\n");
+    }
+    else
+    {
+        printf("Caption: Unknown Image.\n");
+    }
+
+    return 0;
+}
+Sample Input
+dog.jpg
+Sample Output
+Caption: A dog is standing on the grass.
+Sample Input
+cat.jpg
+Sample Output
+Caption: A cat is sitting on a chair.
+Result
+
+The Image Captioning system successfully generated captions for predefined images.
